@@ -11,57 +11,10 @@ El dataset está compuesto por cuatro archivos CSV:
 - **clientes.csv:** información básica de clientes.
 - **metas_mensuales.csv:** metas de ventas mensuales para evaluar el desempeño.
 
----
-
-## 3. Construcción del Dashboard
-
-**Gráficos**
-   
-- **Gráfico de Líneas:** Ventas por mes
-
-Nota: Teniendo en cuenta que los datos de ventas se limitan a dos meses, se filtraron por mes y dia.
-
-
-
-
-```
-Ventas Totales = SUM(ventas_techstore[cantidad])
-```
----
-
-
-
-
-
-**Calculated field:** Se suman las ventas totales.
-```
-(SUM([ventas_techstore].[Cantidad]))
-```
-
----
-
-- **Gráfico de Barras:** Top 10 productos 
-
-
-
----
-
-- **Gráfico de Pie:** Ventas por categoría
-
-
-
----
-
- - **Gráfico de Tabla:** Performance de vendedores (ventas, clientes atendidos)
-
-
-
----
 
 # Comparación de herramientas:
 
-Crear el dashboard en Power BI fue un proceso bastante directo. La interfaz es muy intuitiva: cargas los datos, defines relaciones y construyes visualizaciones sin demasiada fricción. DAX ayuda a crear medidas personalizadas de forma sencilla y, con algo de apoyo en documentación o IA, es fácil entender y replicar el código. En general, fue rápido armar el dashboard y el resultado se ve limpio y profesional.
+La creación del dashboard en Power BI fue un proceso bastante fluido. La herramienta ofrece una interfaz intuitiva que facilita la carga de datos, la definición de relaciones y la construcción de visualizaciones con poca fricción. El lenguaje DAX permite generar medidas personalizadas de manera sencilla, y con el apoyo de la documentación oficial o herramientas de inteligencia artificial, es fácil comprender y replicar las fórmulas necesarias. En general, el desarrollo del dashboard fue ágil y el resultado final luce limpio y profesional.
 
-En Tableau, la experiencia es distinta. Es una herramienta que invita más a explorar los datos y probar diferentes visualizaciones. Arrastrar los atributos hacia las columnas y filas también fue bastante intuitivo, las calculated fields son fáciles de entender y conectar tablas es bastante simple con su interfaz interactiva de "Fuente de datos" parecido a SQL. Además, permite crear dashboards muy interactivos gracias a las acciones entre hojas, lo que da un resultado final más dinámico. Sin embargo, el proceso toma más tiempo, ya que cada visual debe construirse en una hoja y luego agregarse manualmente al dashboard. Además, la interfaz me resultó un poco menos intuitiva que la de Power BI.
+Por otro lado, la experiencia con Tableau es distinta. Se trata de una plataforma que incentiva la exploración de los datos y la experimentación con distintas visualizaciones. El proceso de arrastrar atributos a filas y columnas es también intuitivo, y la creación de calculated fields resulta accesible. La interfaz de conexión de datos, similar a SQL, facilita la vinculación entre tablas. Además, Tableau permite diseñar dashboards altamente interactivos gracias a las acciones entre hojas, lo que da como resultado visualizaciones más dinámicas. No obstante, el proceso puede ser más laborioso, ya que cada visualización debe construirse en una hoja individual y luego integrarse manualmente al dashboard. También cabe mencionar que, en comparación con Power BI, la interfaz puede resultar algo menos intuitiva al principio.
 
-Además, Power BI tiene una versión de escritorio gratuita, mientras que Tableau requiere una licencia de pago, en conclusión, la experiencia en Power BI fue más rápida y eficiente siendo un poco más intuitiva para alguien inexperto, es ideal si se busca construir un dashboard de forma ágil y sin gastar dinero.
